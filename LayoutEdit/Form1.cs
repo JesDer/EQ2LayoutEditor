@@ -19,6 +19,9 @@ namespace LayoutEdit
         public Form1()
         {
             InitializeComponent();
+            // Fix decimal seperator issues by setting culture to en-US 
+            System.Threading.Thread.CurrentThread.CurrentCulture = System.Globalization.CultureInfo.CreateSpecificCulture("en-US");
+            System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.CreateSpecificCulture("en-US");
         }
 
         private void btnLoad_Click(object sender, EventArgs e)
